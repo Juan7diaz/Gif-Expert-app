@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import AddCategory from './components/AddCategory'
+import GifGrid from './components/GifGrid'
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['Kimetsu no yaiba', 'The promised Neverland', 'Wonder Egg Priority'])
+    const [categories, setCategories] = useState(['The promised Neverland'])
 
-   
     //las dos son formas validas de hacer cambios
     //const handleAdd = () =>{
         //setCategories([ 'HunterXHunter', ...categories])
@@ -21,10 +21,11 @@ const GifExpertApp = () => {
 
             <ol>
                 {
-                    categories.map( (category) => (
-                        <li key={ category }>
-                            { category}
-                        </li>
+                    categories.map( category => (
+                        <GifGrid
+                            key={category}
+                            category={ category }
+                        />
                     ))
                 }
             </ol>

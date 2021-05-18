@@ -18,6 +18,7 @@ const AddCategory = ({ setCategories }) => {
         //para que no se garde texto mayor a 2 letras
         if( InputValue.trim().length > 2 ){
             setCategories( cats => [InputValue, ...cats] ); //se utiliza asi ya que no tengo la 'categories' (auqneu tambien la podemos pasar como props)
+            setInputValue('');
         }
     }
 
@@ -25,6 +26,7 @@ const AddCategory = ({ setCategories }) => {
         <form onSubmit={ handleSubmit }>
             <input
                 onChange = { handleInputChange }
+                value = { InputValue }
                 placeholder="Ingrese la categoria a buscar"
             />
         </form>
