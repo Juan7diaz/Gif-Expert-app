@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import GifGridItem from './GifGridItem';
 
 const GifGrid = ({ category }) => {
+    
 
+    const [images, setImages] = useState([])
+
+    useEffect( () =>{
+        getGifs();        
+    }, [])
 
     const getGifs = async() => {
 
@@ -20,14 +27,26 @@ const GifGrid = ({ category }) => {
         })
 
         console.log( gifs );
+        setImages( gifs );
     }
 
-    getGifs();
-
     return (
-        <div>
+        <>
             <h3>{ category }</h3>
-        </div>
+            <div className="card-grid">
+
+                { /* para cuando  es un array de objetos podemos pasar como props { ...img} */
+                    images.map( ( img ) => (
+                        <GifGridItem 
+                            key={ img.id }
+                            /* img={ img }  */
+                            { ...img }
+                        />
+                    ))
+                }
+
+            </div>
+        </>
     )
 }
 
