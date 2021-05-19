@@ -1,20 +1,25 @@
 import React from 'react'
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import GifGridItem from './GifGridItem';
+import LoadingComponent from './LoadingComponent';
 
 
-const GifGrid = ({ category }) => {
+const GifGrid = ({ category, cantGifs }) => {
 
-    const { data, loading } = useFetchGifs( category );
+    //para renombrar la data es data:nombre_Deseado
+    const { data:gifs, loading } = useFetchGifs( category , cantGifs );
 
+    
     return (
         <>
             <h3>{ category }</h3>
 
+            {loading &&  <LoadingComponent />}
+
             <div className="card-grid">
 
                 { /* para cuando  es un array de objetos podemos pasar como props { ...img} */
-                    data.map( ( img ) => (
+                    gifs.map( ( img ) => (
                         <GifGridItem 
                             key={ img.id }
                             /* img={ img }  */

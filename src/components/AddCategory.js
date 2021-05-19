@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const AddCategory = ({ setCategories }) => {
+const AddCategory = ({ setCategories, setCantGifs }) => {
 
     //almacena lo estro por el usuario
     const [InputValue, setInputValue] = useState('')
@@ -22,12 +22,22 @@ const AddCategory = ({ setCategories }) => {
         }
     }
 
+    const handleCantChange = (e) => {
+        setCantGifs( cant => e.target.value)
+    }
+
     return (
         <form onSubmit={ handleSubmit }>
             <input
                 onChange = { handleInputChange }
                 placeholder="Ingrese la categoria a buscar"
             />
+            <select onChange={ handleCantChange }>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
         </form>
     )
 }

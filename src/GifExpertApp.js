@@ -5,18 +5,13 @@ import GifGrid from './components/GifGrid'
 const GifExpertApp = () => {
 
     const [categories, setCategories] = useState(['The promised Neverland'])
-
-    //las dos son formas validas de hacer cambios
-    //const handleAdd = () =>{
-        //setCategories([ 'HunterXHunter', ...categories])
-        //setCategories( cats => [...cats, 'HunterXHunter'])
-   // }
+    const [cantGifs, setCantGifs ] = useState(5);
 
     return (
         <div>
 
             <h1>GifExpertApp</h1>
-            <AddCategory setCategories={ setCategories }/>
+            <AddCategory setCategories={ setCategories } setCantGifs={ setCantGifs } />
             <hr />
 
             <ol>
@@ -25,6 +20,7 @@ const GifExpertApp = () => {
                         <GifGrid
                             key={category}
                             category={ category }
+                            cantGifs = { cantGifs }
                         />
                     ))
                 }
