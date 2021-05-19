@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import AddCategory from './components/AddCategory'
+import NavBar from './components/NavBar'
 import GifGrid from './components/GifGrid'
 
 const GifExpertApp = () => {
@@ -10,7 +11,7 @@ const GifExpertApp = () => {
     return (
         <div>
 
-            <h1>GifExpertApp</h1>
+            <NavBar title={"GifExpertApp"}/>
             <AddCategory setCategories={ setCategories } setCantGifs={ setCantGifs } />
             <hr />
 

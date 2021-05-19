@@ -27,10 +27,11 @@ const AddCategory = ({ setCategories, setCantGifs }) => {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={ handleSubmit } className="form-inline">
             <input
+                className="form-control mr-sm-2"
                 onChange = { handleInputChange }
-                placeholder="Ingrese la categoria a buscar"
+                placeholder="Ingrese el gif a buscar"
             />
             <select onChange={ handleCantChange }>
                 <option value="5">5</option>
