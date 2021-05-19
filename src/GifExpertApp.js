@@ -5,7 +5,7 @@ import GifGrid from './components/GifGrid'
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['The promised Neverland'])
+    const [categories, setCategories] = useState(['shingeki no kyojin'])
     const [cantGifs, setCantGifs ] = useState(5);
 
     return (
