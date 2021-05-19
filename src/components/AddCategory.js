@@ -8,11 +8,11 @@ const AddCategory = ({ setCategories }) => {
 
     //obtiene lo el usuario escribió en el input
     const handleInputChange = ( e ) =>{
-        setInputValue( e.target.value);
+        setInputValue( e.target.value );
     }
 
     //cuando el usuario presiona el 'Enter'
-    const handleSubmit = (e) => {
+    const handleSubmit = ( e ) => {
         e.preventDefault(); //hace que el navegador no se recargue cuando hacemos un 'Enter'
 
         //para que no se garde texto mayor a 2 letras
@@ -26,7 +26,6 @@ const AddCategory = ({ setCategories }) => {
         <form onSubmit={ handleSubmit }>
             <input
                 onChange = { handleInputChange }
-                value = { InputValue }
                 placeholder="Ingrese la categoria a buscar"
             />
         </form>
