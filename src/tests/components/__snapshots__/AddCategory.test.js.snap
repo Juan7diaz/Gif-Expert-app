@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing en el componente addCategoy.js debe de mostrar el componente correctamente  1`] = `
+<form
+  className="form-inline"
+  onSubmit={[Function]}
+>
+  <input
+    className="form-control mr-sm-2"
+    onChange={[Function]}
+    placeholder="Ingrese el gif a buscar"
+    value=""
+  />
+  <select
+    onChange={[Function]}
+  >
+    <option
+      value="5"
+    >
+      5
+    </option>
+    <option
+      value="10"
+    >
+      10
+    </option>
+    <option
+      value="20"
+    >
+      20
+    </option>
+    <option
+      value="30"
+    >
+      30
+    </option>
+  </select>
+</form>
+`;

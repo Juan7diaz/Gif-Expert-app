@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas al componente principal debe de mostrar correctamente GifExpertApp  1`] = `
+<div>
+  <NavBar
+    title="GifExpertApp"
+  />
+  <AddCategory
+    setCantGifs={[Function]}
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      cantGifs={5}
+      category="shingeki no kyojin"
+      key="shingeki no kyojin"
+    />
+  </ol>
+</div>
+`;
+
+exports[`pruebas al componente principal debe de mostrar una lista de categorias  1`] = `
+<div>
+  <NavBar
+    title="GifExpertApp"
+  />
+  <AddCategory
+    setCantGifs={[Function]}
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      cantGifs={5}
+      category="shingeki no kyojin"
+      key="shingeki no kyojin"
+    />
+    <GifGrid
+      cantGifs={5}
+      category="The promised neverland"
+      key="The promised neverland"
+    />
+  </ol>
+</div>
+`;

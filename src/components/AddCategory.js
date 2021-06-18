@@ -10,7 +10,7 @@ const AddCategory = ({ setCategories, setCantGifs }) => {
     const handleInputChange = ( e ) =>{
         setInputValue( e.target.value );
     }
-
+    
     //cuando el usuario presiona el 'Enter'
     const handleSubmit = ( e ) => {
         e.preventDefault(); //hace que el navegador no se recargue cuando hacemos un 'Enter'
@@ -21,14 +21,16 @@ const AddCategory = ({ setCategories, setCantGifs }) => {
             setInputValue('');
         }
     }
-
+    
     const handleCantChange = (e) => {
-        setCantGifs( cant => e.target.value)
+        setCantGifs( e.target.value )
     }
 
     return (
         <form onSubmit={ handleSubmit } className="form-inline">
+            {/* <p>{ InputValue }</p> */}
             <input
+                value = { InputValue }
                 className="form-control mr-sm-2"
                 onChange = { handleInputChange }
                 placeholder="Ingrese el gif a buscar"
@@ -44,7 +46,8 @@ const AddCategory = ({ setCategories, setCantGifs }) => {
 }
 
 AddCategory.propTypes = {
-    setCategories: PropTypes.func.isRequired
+    setCategories: PropTypes.func.isRequired,
+    setCantGifs: PropTypes.func.isRequired
 }
 
 export default AddCategory;

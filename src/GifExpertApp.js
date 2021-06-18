@@ -3,9 +3,9 @@ import AddCategory from './components/AddCategory'
 import NavBar from './components/NavBar'
 import GifGrid from './components/GifGrid'
 
-const GifExpertApp = () => {
+const GifExpertApp = ({ defaultCategories = ['shingeki no kyojin'] }) => {
 
-    const [categories, setCategories] = useState(['shingeki no kyojin'])
+    const [categories, setCategories] = useState( defaultCategories )
     const [cantGifs, setCantGifs ] = useState(5);
 
     return (

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba en el componente GifGridItem.js debe mostrar el componente correctamente  1`] = `
+<div
+  className="card animate__animated animate__backInLeft"
+>
+  <img
+    alt="Un Titulo"
+    src="https://localhost/algo.jp"
+  />
+  <div
+    className="card-body"
+  >
+    <p
+      className="card-text"
+    >
+      Un Titulo
+    </p>
+  </div>
+</div>
+`;
