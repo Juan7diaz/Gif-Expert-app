@@ -40,6 +40,7 @@ const AddCategory = ({ setCategories, setCantGifs }) => {
                 <option value="10">10</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
+                <option value="35">35</option>
             </select>
         </form>
     )

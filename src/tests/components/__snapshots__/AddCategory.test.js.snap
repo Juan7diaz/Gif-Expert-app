@@ -34,6 +34,11 @@ exports[`Testing en el componente addCategoy.js debe de mostrar el componente co
     >
       30
     </option>
+    <option
+      value="35"
+    >
+      35
+    </option>
   </select>
 </form>
 `;
